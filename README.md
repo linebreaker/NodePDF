@@ -16,7 +16,8 @@ npm install nodepdf
 
 ## Contsructor API
 
-You can use NodePDF two ways, one is using a contstructor that returns an instance of `EventEmitter`.
+NodePDF can be usefully invoked in two ways:
+1. By using a constructor that returns an instance of `EventEmitter`.
 
 ```` javascript
 var NodePDF = require('nodepdf');
@@ -49,7 +50,7 @@ pdf.on('stderr', function(stderr){
 });
 
 ````
-Or set the content directly instead of using a URL:
+2. By setting the content directly, instead of pointing to a specified URL:
 ```` javascript
 var pdf = new NodePDF(null, 'google.pdf', {
 	'content': '<html><body><img src="https://www.google.com/images/srpr/logo11w.png" alt="google"/></body></html>',
